@@ -335,8 +335,37 @@ Example:
     <button type="button" name="button">From Submit</button>
 </form>
 ```
-
 NB: All other input type of the form can be found in Appendix - 2
+
+#### 2.7.2 Text Area <a name="textArea"></a>
+`textarea` is used for taking bulk of input. We can specify the number of columns and number of rows with the `cols` and `rows` attribute.
+
+```html
+<textarea name="name" rows="8" cols="80"></textarea>
+```
+#### 2.7.3 Dropdown (select) <a name="dropdown"></a>
+We can make a simple dropdown using the `select` element.
+Simple Syntax:
+```html
+<select class="" name="">
+    <option value="...">...</option>
+    ...
+</select>
+```
+Example:
+```html
+<select class="" name="">
+    <option value="item01">Item01</option>
+    <option value="item02">Item02</option>
+    <option value="item03">Item03</option>
+</select>
+```
+<select class="" name="">
+    <option value="item01">Item01</option>
+    <option value="item02">Item02</option>
+    <option value="item03">Item03</option>
+</select>
+
 ### Appendix -1
 All Special Characters list and Code.\
 
