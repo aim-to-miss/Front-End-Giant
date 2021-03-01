@@ -366,6 +366,29 @@ Example:
     <option value="item03">Item03</option>
 </select>
 
+## 3. Header Area <a name="headerArea"></a>
+### 3.1 Meta <a name="meta"></a>
+`meta` actually is the **Data of the Data**. Different type of attribute of meta is being used. Some of them are:
+1. `cahrset` : Character set used.
+2. `description`: Description of the web page.
+3. `keywords`: Define keywords for the search engine.
+4. `author`: Define the author of the page.
+5. `http-equiv`: Refresh the page after some defined seconds.
+6. `viewport`: Setting the viewport for all the devices.
+
+```html
+<meta charset="UTF-8">
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="John Doe">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+## 4. Multimedia <a name="multimedia"></a>
+
+### 4.1 Audio <a name="audio"></a>
+
+
+
 ### Appendix -1
 All Special Characters list and Code.\
 
@@ -588,3 +611,115 @@ Type  | Description
 `time`	| Defines a control for entering a time (no timezone)
 `url`	| Defines a field for entering a URL
 `week`	| Defines a week and year control (no timezone)
+
+#### Appendix - 3:
+All Tags in one place:
+
+|Tag|Description|
+|---|-----------|
+|`<!-- ..-->`|Comment|
+|`<!DOCTYPE>`|Defines the document type|
+|`<a>`|Defines a Hyperlink|
+|`<abbr>`|Defines an abbribiation or an acryonymw|
+|`<address>`|Defines a contarct information for the author of the document|
+|`<area>`|Defines an area inside an image map |
+|`<article>`|Defines an article |
+|`<aside>`|Defines content aside from the page content|
+|`<audio>`|Defines embeded sound content|
+|`<b>`|Defines bold text|
+|`<base>`|Defines specifies the base url in document|
+|`<bdi>`|Isolate a part of the text that might be formatted in a different direction from other text|
+|`<bdo>`| Override the current text direction|
+|`<blockquote>`|Defines a section that is quoted from another source|
+|`<body>`|Defines the document's body|
+|`<br>`|Defines the single line break|
+|`<button>`|Defines a click able button |
+|`<canvas>`|Used to draw graphics|
+|`<caption>`|Defines a table captions |
+|`<cite>`|Defines the title of a work|
+|`<code>`|Defines a piece of computer code |
+|`<col>`| Specifies column properties for each column within  a `<colgroup>` element|
+|`<colgroup>`|Specifies a group of one or more columns in a table fro formatting|
+|`<data>`|Adds a machine-readable translation of a given content |
+|`<datalist>`|Specifies a list of pre-defined options for input controls |
+|`<dd>`|Defines a description/value of a term in a description list|
+|`<del>`|Defines a text that has been deleted from a document|
+|`<details>`|Defines additional details that the user can view or hide|
+|`<dfn>`|Specifies a term that is going to be defined within the content|
+|`<dialog>`|Defines a dialog box or window|
+|`<div>`|Defines a section in a document|
+|`<dl>`|Defines a description list|
+|`<dt>`|Defines a term/name in a description list|
+|`<em>`|Defines emphasized text |
+|`<embed>`|Defines a container for an external application|
+|`<fieldset>`|Groups related elements in a from|
+|`<figcaption>`|Defines caption for a figure element |
+|`<figure>`|Specifies self-contained content|
+|`<footer>`|Defines a footer for a document|
+|`<form>`|Defines HTML froms for user input |
+|`<h1> to <h6>`|Defines HTML headlines|
+|`<head>`|Contains metadata for the document |
+|`<header>`|Defines a header for a document|
+|`<hr>`|Defines a thematic change in the content |
+|`<html>`|Defines the root of an HTML document|
+|`<i>`|Defines a part of the text in an alternate voice or mood|
+|`<iframe>`|Defines an inline iframe|
+|`<img>`|Defines an image|
+|`<input>`|Defines an input control|
+|`<ins>`|Defines a text that has been inserted into a document|
+|`<kbd>`|Defines keyboard input|
+|`<label>`|Defines a label for an input element |
+|`<legend>`|Defines a caption for a `<fieldset>` element |
+|`<li>`|Defines alist item |
+|`<link>`|Defines the relationship between a document and an external resource |
+|`<main>`|Specifies the main content of a document |
+|`<map>`|Defines an image map|
+|`<mark>`|Defines mark or highlighted text|
+|`<meta>`|Defines meta about an HTML document|
+|`<meter>`|Defines a scalar measurement within a known range|
+|`<nav>`|Defines a navigation link |
+|`<noscript>`|Defines an alternative content for user that do not support client-side scripts|
+|`<object>`|Defines a container for an external application |
+|`<ol>`|Defines an ordered list|
+|`<optgroup>`|Defines a group of related options in a drop-down list|
+|`<option>`|Defines an option in a drop-down list|
+|`<output>`|Defines the result of a calculation|
+|`<p>`|Defines a paragraph|
+|`<param>`|Defines a parameter for an object|
+|`<picture>`|Defines a container for multiple image resources|
+|`<pre>`|Defines preformed text|
+|`<progress>`|Represents the progress of a task|
+|`<q>`|Defines a short quotation|
+|`<rp>`|Defines what to show in browsers that do not support ruby annotations|
+|`<ruby>`|Defines an explanation of characters|
+|`<s>`|Defines text that is no longer correct|
+|`<samp>`|Defines sample output from a computer program|
+|`<script>`|Defines a client-side script|
+|`<section>`|Defines a section in a document|
+|`<select>`|Defines a drop-down list |
+|`<samll>`|Defines smaller text|
+|`<source>`|Defines  multiple media resources fro media element|
+|`<span>`|Defines a section in a document|
+|`<strong>`|Defines important text |
+|`<style>`|Defines style information for a document |
+|`<sub>`|Defines subscription text |
+|`<summary>`|Defines a visible heading for a `<details>` element |
+|`<sup>`|Defines superscripted text |
+|`<svg>`|Defines a container for SVG graphics |
+|`<table>`|Defines a table|
+|`<tbody>`|Groups the body content in a table|
+|`<td>`|Defines a cell in the table|
+|`<template>`|Defines a container for content that should be hidden when the page loads|
+|`<textarea>`|Defines a multiline input control|
+|`<tfoot>`|Groups the footer content in a table|
+|`<th>`|Defines a header cell in a table|
+|`<thead>`|Groups the header content in a table|
+|`<time>`|Defines a specific time|
+|`<title>`|Defines a title for the document|
+|`<tr>`|Defines a row in a table|
+|`<track>`|Defines text tracks for media elements|
+|`<u>`|Defines some text that is unarticulated and styled differently from normal text|
+|`<ul>`|Defines an unordered list|
+|`<var>`|Defines a variable |
+|`<video>`|Defines embedded video content|
+|`<wbr>`|Defines a possible line-break|
