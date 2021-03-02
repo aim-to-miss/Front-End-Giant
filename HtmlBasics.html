@@ -62,6 +62,44 @@
     <p>Programming is fun.</p>
     </article>
 
+    <bdo dir="rtl">
+        Go Right
+    </bdo>
+    <bdo dir="ltr">
+        Go Left
+    </bdo>
+
+    <blockquote cite="http://">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </blockquote>
+
+    <!-- Cite -->
+    <cite>Most valuable text</cite> <br>
+
+    <!-- Code -->
+    Time for some <code>code here. The font is browser default</code> <br>
+
+    This text section is <del>Deleted</del> and this section is <ins>Inserted</ins> <br>
+
+    <p><dfn>Unable:</dfn>A state where you are not able.</p> <br>
+
+    <!-- Dialog -->
+    <dialog open>
+        Text inside the dialog box
+    </dialog>
+    <!-- Embed -->
+    <embed type="video/mp4" src="./assets/video/video.mp4" width="300" height="300">
+
+    <!-- Figure -->
+    <figure>
+      <img
+          src="https://developer.mozilla.org/static/img/favicon144.png"
+      alt="The beautiful MDN logo.">
+      <figcaption>MDN Logo</figcaption>
+    </figure>
+
     <!-- Image -->
     <img src="./assets/images/alone.jpg" alt="Image to Test"  usemap="workmap"/>
 
@@ -101,6 +139,7 @@
     </ol>
 
     <p>Nasted list is also possible</p>
+
     <ul>
       <li>Item01</li>
       <li>
@@ -113,8 +152,20 @@
       <li>Item03</li>
     </ul>
 
+    <dl>
+        <dt>Code</dt>
+        <dd>Feature that works.</dd>
+        <dt>Bug</dt>
+        <dd>Feature taht will not work.</dd>
+    </dl>
+
     <!-- Table -->
     <table>
+        <caption>Learning Table</caption>
+        <colgroup>
+            <col span="1" class="" style="background-color:red;">
+            <col span="2" class="" style="background-color:yellow;">
+        </colgroup>
       <tr>
         <th>Column 01</th>
         <th>Column 02</th>
@@ -194,12 +245,27 @@
       <option value="item02">Item02</option>
       <option value="item03">Item03</option>
     </select>
+    <!-- Datalist -->
+    <input list="dataList">
+    <datalist id="dataList">
+        <option value="item01">Item 01</option>
+        <option value="item02">Item 02</option>
+    </datalist>
+
+    </datalist> -->
     <!-- Audio -->
-    <audio controls autoplay loop>
+    <audio controls loop>
         <source src="./assets/audio/bensound-ukulele.mp3" type="audio/mp3">
     </audio>
-    <video autoplay loop poster="./assets/images/alone.jpg">
+    <video  controls loop poster="./assets/images/alone.jpg">
         <source src="./assets/video/video.mp4" type="video/mp4">
     </video>
+    <iframe id="inlineFrameExample"
+        title="Inline Frame Example"
+        width="300"
+        height="200"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+    </iframe>
+    <footer></footer>
   </body>
 </html>

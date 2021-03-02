@@ -193,127 +193,193 @@ Example:
 <p>Programming is fun.</p>
 </article>
 
-#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+#### 2.2.12 Direction <a name="direction"></a>
 Basic syntax:
 ```html
+<bdo dir="...direction...">
+    ...Text need to change direction...
+</bdo>
+```
+`bdo` element is used to specify the direction of the text inside the element. the direction goes inside `dir` attribute. Possible values are, `rtl`, `ltr`
+Example:
+```html
+<bdo dir="rtl">
+    Go Right
+</bdo>
+<bdo dir="ltr">
+    Go Left
+</bdo>
+```
+<bdo dir="rtl">
+    Go Right
+</bdo>
+<bdo dir="ltr">
+    Go Left
+</bdo>
+
+
+#### 2.2.13 Blockquote <a name="blockquote"></a>
+Basic syntax:
+```html
+<blockquote cite="http://">
+    ...block content...
+</blockquote>
+```
+`blockquote` elements indicate that the containing text is quoted from another resource. The text is idented to the right by default. `cite` attribute for the `blockquote` is used for the reference of the quote.
+Example:
+```html
+<blockquote cite="http://">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</blockquote>
+```
+<blockquote cite="http://">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</blockquote>
+
+#### 2.2.14 Cite <a name="cite"></a>
+Basic syntax:
+```html
+<cite>...Text...</cite>
 
 ```
 Example:
 ```html
+<cite>Most valuable text</cite>
 ```
+<cite>Most valuable text</cite>
 
-
-#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+#### 2.2.15 Abbreviation <a name="abbreviation"></a>
 Basic syntax:
 ```html
+<code>...code...</code>
 
 ```
 Example:
 ```html
+<code>code here. The font is browser default</code>
 ```
+<code>code here. The font is browser default</code>
 
 
-#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+#### 2.2.16 Delete <a name="del"></a>
 Basic syntax:
 ```html
-
+<del>...Text..</del>
 ```
 Example:
 ```html
+<del>...Text..</del>
 ```
+<del>...Text..</del>
+Represent a deleted text.
 
-
-#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+#### 2.2.17 Insertion <a name="ins"></a>
 Basic syntax:
 ```html
-
+<ins>...Text..</ins>
 ```
 Example:
 ```html
+<ins>...Text..</ins>
 ```
+<ins>...Text..</ins>
+Represent newly inserted text.
 
 
-#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+#### 2.2.18 Definition <a name="definition"></a>
 Basic syntax:
 ```html
-
+<dfn>Term</dfn>
 ```
 Example:
 ```html
+<p><dfn>Unable:</dfn>A state where you are not able.</p>
 ```
+<p><dfn>Unable:</dfn>A state where you are not able.</p>
 
-
-#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+#### 2.2.19 Dialog <a name="dialog"></a>
 Basic syntax:
 ```html
+<dialog>
+    ...Inside Content of the dialog...
+</dialog>
+```
+`dialog` element have an attribute `open` that represent the visibility of the dialog box.
+Example:
+```html
+<dialog open>
+    Text inside the dialog box
+</dialog>
+```
+<dialog open>
+    Text inside the dialog box
+</dialog>
 
+#### 2.2.20 Content Division <a name="div"></a>
+`div` is a content container that contains the content. It has no effect on the content or layout until styled in some way using CSS
+Basic syntax:
+```html
+<div></div>
 ```
 Example:
 ```html
+<div><p>Text</p></div>
 ```
 
-
-#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+#### 2.2.21 Embed <a name="embed"></a>
 Basic syntax:
 ```html
-
+<embed attributes >
+```
+`embed` element is used to embed external content in the document. It has different attribute for control.
+`src`: URL of the content.\
+`type`: Type of the content.\
+`width`: Width of the content.\
+`height`: Height of the content in pixels.
+Example:
+```html
+<embed type="video/mp4" src="./assets/video/video.mp4" width="300" height="300">
+```
+#### 2.2.22 Figure <a name="figure"></a>
+`figure` element represents self-contained content. `figcaption` is a optional element that adds caption to the figure.
+Basic syntax:
+```html
+<figure>
+  ...Content of the figure...
+  <figcaption>Figure Caption</figcaption>
+</figure>
 ```
 Example:
 ```html
+<figure>
+  <img
+      src="https://developer.mozilla.org/static/img/favicon144.png"
+  alt="The beautiful MDN logo.">
+  <figcaption>MDN Logo</figcaption>
+</figure>
 ```
+<figure>
+  <img
+      src="https://developer.mozilla.org/static/img/favicon144.png"
+  alt="The beautiful MDN logo.">
+  <figcaption>MDN Logo</figcaption>
+</figure>
 
-
-#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+#### 2.2.23 Footer <a name="footer"></a>
 Basic syntax:
 ```html
-
+<footer></footer>
 ```
+defines the footer section.
 Example:
 ```html
+<footer>Content of the footer section</footer>
 ```
-
-
-
-#### 2.2.9 Abbreviation <a name="abbreviation"></a>
-Basic syntax:
-```html
-
-```
-Example:
-```html
-```
-
-#### 2.2.9 Abbreviation <a name="abbreviation"></a>
-Basic syntax:
-```html
-
-```
-Example:
-```html
-```
-
-
-#### 2.2.9 Abbreviation <a name="abbreviation"></a>
-Basic syntax:
-```html
-
-```
-Example:
-```html
-```
-
-
-#### 2.2.9 Abbreviation <a name="abbreviation"></a>
-Basic syntax:
-```html
-
-```
-Example:
-```html
-```
-
-
-
+#### 2.2.24 Iframe <a name="iframe"></a>
 
 ### 2.3 Image <a name="Image"></a>
 ```html
@@ -444,10 +510,35 @@ Example:
     <li>Item03</li>
 </ul>
 
+#### 2.5.4 Definition List <a name="definitionList"></a>
+Basic syntax:
+```html
+<dl>
+    <dt>Defination Term</dt>
+    <dd>Definition</dd>
+</dl>
+```
+Example:
+```html
+<dl>
+    <dt>Code</dt>
+    <dd>Feature that works.</dd>
+    <dt>Bug</dt>
+    <dd>Feature taht will not work.</dd>
+</dl>
+```
+<dl>
+    <dt>Code</dt>
+    <dd>Feature that works.</dd>
+    <dt>Bug</dt>
+    <dd>Feature taht will not work.</dd>
+</dl>
+
 ### 2.6 Table <a name="table"></a>
 Basic Syntax:
 ```html
 <table>
+    <caption></caption>
     <tr>
         <th>...</th>
     </tr>
@@ -457,9 +548,22 @@ Basic Syntax:
     ...
 </table>
 ```
+`caption` element is used for adding table caption. `colgroup` element is used to modify specified colums in a table. Modification is defined with the `col` element. `col` element have different attributes.
+`span`: Defines the number of column under consideration.\
+`align`: For alignment of the text.\
+`valign`: For the vertical alignment of the text.\
+`bgcolor`: Specifies the background color.\
+`charoff`: Specifies the number of characters to cutoff for exceeding.\
+`class`: If any custom class needed.\
+`style`: If any styling needed.\
 Example:
 ```html
 <table>
+    <caption>Learning Table</caption>
+    <colgroup>
+        <col span="1" class="" style="background-color:red;">
+        <col span="2" class="" style="background-color:yellow;">
+    </colgroup>
     <tr>
         <th>Column 01</th>
         <th>Column 02</th>
@@ -478,6 +582,10 @@ Example:
 </table>
 ```
 <table>
+    <colgroup>
+        <col span="1" class="" style="background-color:red;">
+        <col span="2" class="" style="background-color:yellow;">
+    </colgroup>
     <tr>
         <th>Column 01</th>
         <th>Column 02</th>
@@ -587,6 +695,32 @@ Example:
     <option value="item03">Item03</option>
 </select>
 
+#### 2.7.4 Datalist (select) <a name="datalist"></a>
+`datalist` is used show a dropdown related to an input element. The `input` element have an attribute `list` which takes the id of the datalist.
+Basic Syntax:
+```html
+<input list="idOfTheDataList">
+<datalist id="">
+    <option value="...">...</option>
+    <option value="...">...</option>
+</datalist>
+```
+Example:
+```html
+<input list="dataList">
+<datalist id="dataList">
+    <option value="item01">Item 01</option>
+    <option value="item02">Item 02</option>
+</datalist>
+```
+<input list="dataList">
+<datalist id="dataList">
+    <option value="item01">Item 01</option>
+    <option value="item02">Item 02</option>
+</datalist>
+
+The main difference between `select` and `datalist` is that the `select` requires users to choose from the indicated options. The `datalist` allows users to either choose from the specified answers, or to type in their original ones.
+
 ## 3. Header Area <a name="headerArea"></a>
 ### 3.1 Meta <a name="meta"></a>
 `meta` actually is the **Data of the Data**. Different type of attribute of meta is being used. Some of them are:
@@ -603,6 +737,12 @@ Example:
 <meta name="keywords" content="HTML, CSS, JavaScript">
 <meta name="author" content="John Doe">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+### 3.2 Base <a name="base"></a>
+`base` element is used to specify a base url and targets for all resources links.Base element have `href` and `target` attributes that performs same as they does in Hyperlink.There can be only base element in the document and it needed to be added in the hear section.
+Simple Syntax:
+```html
+<base href="https://www.w3schools.com/" target="_blank">
 ```
 ## 4. Multimedia <a name="multimedia"></a>
 ### 4.1 Audio <a name="audio"></a>
@@ -627,13 +767,10 @@ Basic syntax:
 
 Example:
 ```html
-<audio controls autoplay loop>
+<audio controls  loop>
     <source src="./assets/audio/bensound-ukulele.mp3" type="audio/mp3">
 </audio>
 ```
-<audio controls autoplay loop>
-    <source src="./assets/audio/bensound-ukulele.mp3" type="audio/mp3">
-</audio>
 
 ### 4.2 Video <a name="video"></a>
 Basic syntax:
@@ -656,6 +793,14 @@ Basic syntax:
 `poster`: **Values:** URL - Specifies the image to be shown while the video is downloading.\
 `preload`: **Values:** auto, metadat, none - Specifies what author thinks will lead to user experience at its best.
 `src`: **Values:** URL - Specifies the URL.
+
+Example:
+```html
+<video  controls loop poster="./assets/images/alone.jpg">
+    <source src="./assets/video/video.mp4" type="video/mp4">
+</video>
+```
+
 
 
 ### Appendix -1
