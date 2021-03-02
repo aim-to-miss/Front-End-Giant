@@ -132,12 +132,233 @@ Example:
     We can also use code for the specialCharacters:  &#169;
 </p>
 
+#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+<abbr title="...fullform...">Short Form</abbr>
+```
+Example:
+```html
+<abbr title="Bachelor of Science">BSc</abbr>
+```
+<abbr title="Bachelor of Science">BSc</abbr>
+
+#### 2.2.10 Address <a name="address"></a>
+Basic syntax:
+```html
+<address>
+    otherTags
+</address>
+```
+Example:
+```html
+<address>
+  Written by Author <br />
+  Visit us at:<br />
+  Example.com<br />
+  Box 564, Disneyland<br />
+  USA
+</address>
+```
+<address>
+  Written by Author <br />
+  Visit us at:<br />
+  Example.com<br />
+  Box 564, Disneyland<br />
+  USA
+</address>
+
+
+#### 2.2.11 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+<article>
+    Other Content
+</article>
+```
+The `article` tag specifies independent, self-contained content. Potential sources for the `article` element:
+1. Forum post
+2. Blog post
+3. News story
+
+Example:
+```html
+<article>
+<h2>Joke 01</h2>
+<p>Programming is fun.</p>
+</article>
+```
+<article>
+<h2>Joke 01</h2>
+<p>Programming is fun.</p>
+</article>
+
+#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+
+```
+Example:
+```html
+```
+
+
+#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+
+```
+Example:
+```html
+```
+
+
+#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+
+```
+Example:
+```html
+```
+
+
+#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+
+```
+Example:
+```html
+```
+
+
+#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+
+```
+Example:
+```html
+```
+
+
+#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+
+```
+Example:
+```html
+```
+
+
+#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+
+```
+Example:
+```html
+```
+
+
+#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+
+```
+Example:
+```html
+```
+
+
+
+#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+
+```
+Example:
+```html
+```
+
+#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+
+```
+Example:
+```html
+```
+
+
+#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+
+```
+Example:
+```html
+```
+
+
+#### 2.2.9 Abbreviation <a name="abbreviation"></a>
+Basic syntax:
+```html
+
+```
+Example:
+```html
+```
+
+
+
+
 ### 2.3 Image <a name="Image"></a>
 ```html
 <img src="" alt="">
 ```
 `src` : Source of the image.\
 `alt`: Alternative text for the image, if the image is not loaded.
+
+There are `map` and `area` element that can be used for mapping clickable area in an image. But to do so the `img` element must have to have an attrubute `usemap` assigning the name of the map.
+Basic syntax:
+```html
+<img src="" alt=""  usemap="#id"/>
+<map name="workmap">
+  <area
+    shape
+    coords
+    alt
+    href
+  />
+  ...
+</map>
+```
+The `map` map is used to define an image map. An image map is an image with click able areas. The `area` tag defines an area inside an image map.\
+`sahpe`: Represent the shape of the area. i.e: `rect`,`circle`.\
+`coords`: Represent the co-ordinates of the shape. Number of value depends on the shape.\
+`alt`: Alternative text.\
+`href`: Hyper link that will be redirected after clicking the area.
+
+Example:
+```html
+<map name="workmap">
+  <area
+    shape="rect"
+    coords="34,44,270,350"
+    alt="Computer"
+    href="#"
+  />
+  <area
+    shape="rect"
+    coords="290,172,333,250"
+    alt="Phone"
+    href="#"
+  />
+</map>
+```
 
 ### 2.4 Link <a name="Image"></a>
 ```html
@@ -384,9 +605,57 @@ Example:
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 ## 4. Multimedia <a name="multimedia"></a>
-
 ### 4.1 Audio <a name="audio"></a>
+Basic syntax:
+```html
+<audio
+    ...attributes...
+    preload="auto/metadata/none"
+    onplay="invokeFunction()"
+    >
+    <source src="..." type="audio/...fileType...">
+    <source src="..." type="audio/...fileType...">
+    Text that will be shown when error.
+</audio>
+```
+`audio` element is used embed the audio in the page. `source` element is used to specify the source of the audio. `src` attribute is used to specify the source of the audio `type` attribute a specifies the file type.We can have multiple `source` element. The valid one will play first. `audio` element have `preload` attribute to preload the audio before paly. Any text between the tag element will be only shown if there is error in playing the audio.\
+`audio` element have other different attributes for audio controls.\
+`controls`: Enables the audio control, browser default.\
+`autoplay`: Autoplayes the audio after load.\
+`loop`: Loop the audio.\
+`muted`: Mute the audio by default.\
 
+Example:
+```html
+<audio controls autoplay loop>
+    <source src="./assets/audio/bensound-ukulele.mp3" type="audio/mp3">
+</audio>
+```
+<audio controls autoplay loop>
+    <source src="./assets/audio/bensound-ukulele.mp3" type="audio/mp3">
+</audio>
+
+### 4.2 Video <a name="video"></a>
+Basic syntax:
+```html
+<video
+    ...attributes...
+    >
+    <source src="..." type="video/...fileType...">
+    <source src="..." type="video/...fileType...">
+    Text that will be shown when error.
+</video>
+```
+`video` element is used embed the video in the page. `source` element is used to specify the source of the audio. `src` attribute is used to specify the source of the audio `type` attribute a specifies the file type. Attributes for video elements are:\
+`autoplay`: **Values:** autoplay - Specifies that the video will play automatically.\
+`controls`: **Values:** controls - Specifies that the video controls gets displayed.\
+`loop`: **Values:** loop - Specifies that the video will start again every time after finish.\
+`height`: **Values:** pixels - Specifies the height.\
+`weight`: **Values:** pixels - Specifies the width.\
+`muted`:**Values:** muted - Specifies that the audio should be muted.\
+`poster`: **Values:** URL - Specifies the image to be shown while the video is downloading.\
+`preload`: **Values:** auto, metadat, none - Specifies what author thinks will lead to user experience at its best.
+`src`: **Values:** URL - Specifies the URL.
 
 
 ### Appendix -1
@@ -619,13 +888,13 @@ All Tags in one place:
 |---|-----------|
 |`<!-- ..-->`|Comment|
 |`<!DOCTYPE>`|Defines the document type|
-|`<a>`|Defines a Hyperlink|
-|`<abbr>`|Defines an abbribiation or an acryonymw|
-|`<address>`|Defines a contarct information for the author of the document|
+|`<a>`|Defines a Hyper link|
+|`<abbr>`|Defines an abbreviation or an acronym|
+|`<address>`|Defines a contract information for the author of the document|
 |`<area>`|Defines an area inside an image map |
 |`<article>`|Defines an article |
 |`<aside>`|Defines content aside from the page content|
-|`<audio>`|Defines embeded sound content|
+|`<audio>`|Defines embedded sound content|
 |`<b>`|Defines bold text|
 |`<base>`|Defines specifies the base url in document|
 |`<bdi>`|Isolate a part of the text that might be formatted in a different direction from other text|
@@ -710,7 +979,7 @@ All Tags in one place:
 |`<tbody>`|Groups the body content in a table|
 |`<td>`|Defines a cell in the table|
 |`<template>`|Defines a container for content that should be hidden when the page loads|
-|`<textarea>`|Defines a multiline input control|
+|`<textarea>`|Defines a multi line input control|
 |`<tfoot>`|Groups the footer content in a table|
 |`<th>`|Defines a header cell in a table|
 |`<thead>`|Groups the header content in a table|

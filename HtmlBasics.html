@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       HtmlLearners
     </title>
-    <meta >
-    <link  />
+    <meta />
+    <link />
   </head>
   <body>
     <!-- All Headings -->
@@ -22,7 +22,13 @@
     <p>One line paragraph</p>
 
     <p id="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in<br /> reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in<br />
+      reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+      qui officia deserunt mollit anim id est laborum.
     </p>
     <p>(A word)<sup>Over another word</sup></p>
     <p>(A word)<sub>Below another word</sub></p>
@@ -33,13 +39,46 @@
     <p>Sometimes you need to <u>Underline</u></p>
     <!-- Adding Special Characters -->
     <p>
-        Let's add a Copywite Character: &copy;<br />
-        We can also use code for the specialCharacters: &#169;
-
+      Let's add a Copywite Character: &copy;<br />
+      We can also use code for the specialCharacters: &#169;
+    </p>
+    <p>
+      Hover the mouse to see the full form of:
+      <abbr title="Bachelor of Science">BSc</abbr>
     </p>
 
+    <!-- Address -->
+    <address>
+      Written by Author <br />
+      Visit us at:<br />
+      Example.com<br />
+      Box 564, Disneyland<br />
+      USA
+    </address>
+
+    <!-- Article -->
+    <article>
+    <h2>Joke 01</h2>
+    <p>Programming is fun.</p>
+    </article>
+
     <!-- Image -->
-    <img src="./assets/images/alone.jpg" alt="Image to Test">
+    <img src="./assets/images/alone.jpg" alt="Image to Test"  usemap="workmap"/>
+
+    <map name="workmap">
+      <area
+        shape="rect"
+        coords="34,44,270,350"
+        alt="Computer"
+        href="#"
+      />
+      <area
+        shape="rect"
+        coords="290,172,333,250"
+        alt="Phone"
+        href="#"
+      />
+    </map>
 
     <!-- Hyperlink -->
     <a href="#">Go Check It</a>
@@ -48,99 +87,119 @@
     <a href="#"><img src="" /></a>
 
     <!-- List -->
-    <p>
-        Lets Start with Unordered List <br/>
-    </p>
+    <p>Lets Start with Unordered List <br /></p>
     <ui>
-        <li>Item 01</li>
-        <li>Item 02</li>
-        <li>Item 03</li>
+      <li>Item 01</li>
+      <li>Item 02</li>
+      <li>Item 03</li>
     </ui>
-    <p>
-        Now Ordered List <br/>
-    </p>
+    <p>Now Ordered List <br /></p>
     <ol>
-        <li>Item 01</li>
-        <li>Item 02</li>
-        <li>Item 03</li>
+      <li>Item 01</li>
+      <li>Item 02</li>
+      <li>Item 03</li>
     </ol>
 
     <p>Nasted list is also possible</p>
     <ul>
-        <li>Item01</li>
-        <li>
-            Item02
-            <ol>
-                <li>SubItem01</li>
-                <li>SubItem02</li>
-            </ol>
-        </li>
-        <li>Item03</li>
+      <li>Item01</li>
+      <li>
+        Item02
+        <ol>
+          <li>SubItem01</li>
+          <li>SubItem02</li>
+        </ol>
+      </li>
+      <li>Item03</li>
     </ul>
 
     <!-- Table -->
     <table>
-        <tr>
-            <th>Column 01</th>
-            <th>Column 02</th>
-            <th>Column 03</th>
-        </tr>
-        <tr>
-            <td>Item 01</td>
-            <td>Item 02</td>
-            <td>Item 03</td>
-        </tr>
-        <tr>
-            <td>Item 11</td>
-            <td>Item 12</td>
-            <td>Item 13</td>
-        </tr>
+      <tr>
+        <th>Column 01</th>
+        <th>Column 02</th>
+        <th>Column 03</th>
+      </tr>
+      <tr>
+        <td>Item 01</td>
+        <td>Item 02</td>
+        <td>Item 03</td>
+      </tr>
+      <tr>
+        <td>Item 11</td>
+        <td>Item 12</td>
+        <td>Item 13</td>
+      </tr>
     </table>
 
     <!-- From -->
     <form class="" action="index.html" method="post">
-        <ul>
-            <li>
-                <label for="labeledField">Label for input field, related with ID</label><br>
-                <input type="text" name="" value="" id="labeledField">
-            </li>
-            <li>
-                <p>Label without label Element</p>
-                <input type="text" name="withoutLabel" placeholder="Wtrite what you expect">
-            </li>
-            <li><input type="text"  value="preDefinedValue"></li>
-            <li><input type="submit"  value="Button Text - Go"></li>
-            <li><input type="checkbox" > Check if you understand</li>
-            <li><input type="color"> Select your color</li>
-            <li>Pick Up your required date: <input type="date"></li>
-            <li>Pick Up your required date with time: <input type="datetime-local"></li>
-            <li>Enter email: <input type="email"></li>
-            <li><input type="file"> Select file to upload</li>
-            <li>There is a field, But you can not see it. <input type="hidden"></li>
-            <li><input type="image"> Upload your image</li>
-            <li>Just pick up the month of a year: <input type="month"></li>
-            <li>Dial Your Numbr: <input type="number"></li>
-            <li><input type="password" placeholder="Password"> Password please!!!</li>
-            <li>
-                <input type="radio"> Item to check 01 <br>
-                <input type="radio"> Item to check 02
-            </li>
-            <li><input type="range"> How much angry are you?</li>
-            <li><input type="reset"> Reset all the value.</li>
-            <li><input type="search"> Search Anything. But you will get nothing.</li>
-            <li>May be you cal call your Parents: <input type="tel" name="" value=""></li>
-            <li>Tell me when you get up: <input type="time"></li>
-            <li><input type="url"> : Make me Frieds</li>
-            <li>Take any week of a year for vacation: <input type="week"></li>
-        </ul>
-        <button type="button" name="button">From Submit</button>
+      <ul>
+        <li>
+          <label for="labeledField"
+            >Label for input field, related with ID</label
+          ><br />
+          <input type="text" name="" value="" id="labeledField" />
+        </li>
+        <li>
+          <p>Label without label Element</p>
+          <input
+            type="text"
+            name="withoutLabel"
+            placeholder="Wtrite what you expect"
+          />
+        </li>
+        <li><input type="text" value="preDefinedValue" /></li>
+        <li><input type="submit" value="Button Text - Go" /></li>
+        <li><input type="checkbox" /> Check if you understand</li>
+        <li><input type="color" /> Select your color</li>
+        <li>Pick Up your required date: <input type="date" /></li>
+        <li>
+          Pick Up your required date with time: <input type="datetime-local" />
+        </li>
+        <li>Enter email: <input type="email" /></li>
+        <li><input type="file" /> Select file to upload</li>
+        <li>
+          There is a field, But you can not see it. <input type="hidden" />
+        </li>
+        <li><input type="image" /> Upload your image</li>
+        <li>Just pick up the month of a year: <input type="month" /></li>
+        <li>Dial Your Numbr: <input type="number" /></li>
+        <li>
+          <input type="password" placeholder="Password" /> Password please!!!
+        </li>
+        <li>
+          <input type="radio" /> Item to check 01 <br />
+          <input type="radio" /> Item to check 02
+        </li>
+        <li><input type="range" /> How much angry are you?</li>
+        <li><input type="reset" /> Reset all the value.</li>
+        <li>
+          <input type="search" /> Search Anything. But you will get nothing.
+        </li>
+        <li>
+          May be you cal call your Parents:
+          <input type="tel" name="" value="" />
+        </li>
+        <li>Tell me when you get up: <input type="time" /></li>
+        <li><input type="url" /> : Make me Frieds</li>
+        <li>Take any week of a year for vacation: <input type="week" /></li>
+      </ul>
+      <button type="button" name="button">From Submit</button>
     </form>
     <textarea name="name" rows="8" cols="80"></textarea>
     <!-- Dropdown -->
     <select class="" name="">
-        <option value="item01">Item01</option>
-        <option value="item02">Item02</option>
-        <option value="item03">Item03</option>
+      <option value="item01">Item01</option>
+      <option value="item02">Item02</option>
+      <option value="item03">Item03</option>
     </select>
+    <!-- Audio -->
+    <audio controls autoplay loop>
+        <source src="./assets/audio/bensound-ukulele.mp3" type="audio/mp3">
+    </audio>
+    <video autoplay loop poster="./assets/images/alone.jpg">
+        <source src="./assets/video/video.mp4" type="video/mp4">
+    </video>
   </body>
 </html>
