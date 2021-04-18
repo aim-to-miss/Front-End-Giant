@@ -289,6 +289,9 @@ Example:
 <ins>...Text..</ins>
 Represent newly inserted text.
 
+`cite` : Defines the URI of a resource that describes the change.\
+`datetime`: Indicate the date and time of the change.
+
 
 #### 2.2.18 Definition <a name="definition"></a>
 Basic syntax:
@@ -330,6 +333,8 @@ Example:
 <div><p>Text</p></div>
 ```
 
+
+
 #### 2.2.21 Embed <a name="embed"></a>
 Basic syntax:
 ```html
@@ -369,7 +374,11 @@ Example:
   <figcaption>MDN Logo</figcaption>
 </figure>
 
-#### 2.2.23 Footer <a name="footer"></a>
+
+
+
+
+#### 2.2.24 Footer <a name="footer"></a>
 Basic syntax:
 ```html
 <footer></footer>
@@ -610,15 +619,21 @@ Example:
 Basic Syntax:
 ```html
 <form class="" action="" method="">
-    <label for="">...</label>
-    <input type="" name="" value="" id="">
-    <input type="" name="" placeholder="">
-    <input type="text" name="" value="">
-    <input type="submit" name="" value="">
+    <fieldset>
+        <legend> Caption of fieldset</legend>
+        <label for="">...</label>
+        <input type="" name="" value="" id="">
+        <input type="" name="" placeholder="">
+        <input type="text" name="" value="">
+        <input type="submit" name="" value="">
+    </fieldset>
+
     <button type="button" name="button">From Submit</button>
 </form>
 ```
 `form`: Every from element must be wrapped with the from tag.\
+`fieldset`element is used to group several controls as well as labels.\
+`legend` adds caption for a field set.\
 `label`: Element is used to label a form field. We also use other element ie. `p` for labeling. But `label` element gives a flexibility. It the `label text` is clicked the targeted field becomes highlighted. `for` attribute of the form takes the `id` of the specified `input` element. In other world we need to give the `id` to the `input` element, and put that `id` value in the `for` attribute of the `label` element.\
 `name`: Name attribute of the `input` element is required for further operations.\
 `placeholder`: placeholder attributes `input` is use to describe the expected to the user.\
@@ -626,43 +641,53 @@ Basic Syntax:
 `submit`: Input type submit can be used to submit a from.\
 `button`: Button element can also be used for from submission.\
 
+Attributes of the fieldset:\
+`disabled`: All descended form controls will be disabled, form can not be submited. And they won't receive any browser events. elements inside `legend` will be disabled.\
+`form`: Takes the `id` value of the from.\
+`name`.
+
 Example:
 ```html
 <form class="" action="index.html" method="post">
-    <ul>
-        <li>
-            <label for="labeledField">Label for input field, related with ID</label><br>
-            <input type="text" name="" value="" id="labeledField">
-        </li>
-        <li>
-            <p>Label without label Element</p>
-            <input type="text" name="withoutLabel" placeholder="Wtrite what you expect">
-        </li>
-        <li><input type="text"  value="preDefinedValue"></li>
-        <li><input type="submit"  value="Button Text - Go"></li>
-        <li><input type="checkbox" > Check if you understand</li>
-        <li><input type="color"> Select your color</li>
-        <li>Pick Up your required date: <input type="date"></li>
-        <li>Pick Up your required date with time: <input type="datetime-local"></li>
-        <li>Enter email: <input type="email"></li>
-        <li><input type="file"> Select file to upload</li>
-        <li>There is a field, But you can not see it. <input type="hidden"></li>
-        <li><input type="image"> Upload your image</li>
-        <li>Just pick up the month of a year: <input type="month"></li>
-        <li>Dial Your Numbr: <input type="number"></li>
-        <li><input type="password" placeholder="Password"> Password please!!!</li>
-        <li>
-            <input type="radio"> Item to check 01 <br>
-            <input type="radio"> Item to check 02
-        </li>
-        <li><input type="range"> How much angry are you?</li>
-        <li><input type="reset"> Reset all the value.</li>
-        <li><input type="search"> Search Anything. But you will get nothing.</li>
-        <li>May be you cal call your Parents: <input type="tel" name="" value=""></li>
-        <li>Tell me when you get up: <input type="time"></li>
-        <li><input type="url"> : Make me Frieds</li>
-        <li>Take any week of a year for vacation: <input type="week"></li>
-    </ul>
+    <fieldset>
+        <legend>
+            My be all possible input field examples
+        </legend>
+        <ul>
+            <li>
+                <label for="labeledField">Label for input field, related with ID</label><br>
+                <input type="text" name="" value="" id="labeledField">
+            </li>
+            <li>
+                <p>Label without label Element</p>
+                <input type="text" name="withoutLabel" placeholder="Wtrite what you expect">
+            </li>
+            <li><input type="text"  value="preDefinedValue"></li>
+            <li><input type="submit"  value="Button Text - Go"></li>
+            <li><input type="checkbox" > Check if you understand</li>
+            <li><input type="color"> Select your color</li>
+            <li>Pick Up your required date: <input type="date"></li>
+            <li>Pick Up your required date with time: <input type="datetime-local"></li>
+            <li>Enter email: <input type="email"></li>
+            <li><input type="file"> Select file to upload</li>
+            <li>There is a field, But you can not see it. <input type="hidden"></li>
+            <li><input type="image"> Upload your image</li>
+            <li>Just pick up the month of a year: <input type="month"></li>
+            <li>Dial Your Numbr: <input type="number"></li>
+            <li><input type="password" placeholder="Password"> Password please!!!</li>
+            <li>
+                <input type="radio"> Item to check 01 <br>
+                <input type="radio"> Item to check 02
+            </li>
+            <li><input type="range"> How much angry are you?</li>
+            <li><input type="reset"> Reset all the value.</li>
+            <li><input type="search"> Search Anything. But you will get nothing.</li>
+            <li>May be you cal call your Parents: <input type="tel" name="" value=""></li>
+            <li>Tell me when you get up: <input type="time"></li>
+            <li><input type="url"> : Make me Frieds</li>
+            <li>Take any week of a year for vacation: <input type="week"></li>
+        </ul>
+    </fieldset>
     <button type="button" name="button">From Submit</button>
 </form>
 ```
