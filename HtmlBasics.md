@@ -947,6 +947,27 @@ Example:
 </video>
 ```
 
+### 4.3 Meter <a name="meter"></a>
+
+Basic syntax:
+```html
+<meter
+    ...attributes...
+    >
+</meter>
+```
+Meter represents either a scalar value within a known range or fractional value.
+- `id`:Distinguishable id for query in label of form or others.\
+- `value`: Current numeric value. Must be in between `min` and `max`. Other wise it will be `0`.
+- `min`: Lower numeric bound. Default value `0`.\
+- `max`: Upper numeric bound. Default value `1`.\
+- `high`: The lower numeric bound of the high end measured range. Default value `max`.\
+- `low`: The upper numeric bound of the low end measured range. Default value `min`.\
+- `optimum`: Optimal numeric value.
+- `form`: Distinguishable id for query in label of form or others.
+
+<meter id="fuel" value="40" min="0" max="100" low="20" high="80" optimum="70"></meter>
+
 
 
 ### Appendix -1
