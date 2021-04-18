@@ -867,6 +867,49 @@ There are several Attributes for iframe:
 Scripting:
 All `iframes` are included in `window.frames` pseudo-array. Windo object of `ifame` is `contentWindow`. THe `contentDocument` property refers to `document` inside the `iframe`
 
+### 2.9 Object <a name="object"></a>
+`object` element represent an external resource, which can be treated as image, a nasted browsing context or a resource to be handled by a plugin.
+Basic Syntax:
+```html
+<object type="..."
+        data="..."
+        width="..."
+        height="..."
+        form="..."
+        name="..."
+        usemap="#...">
+</object>
+```
+-  `type`: The content type of the resource by data.
+- `data`: The address of the resource as a valid url.
+- `width`: The width of the display resource in px.
+- `height`: The height of the dispaly resource in px.
+- `form`: The form element (Owner): if any.
+- `name`: Name fro the control.
+- `usemap`: A hash named reference to `map` element.
+
+### 2.10 NoScript <a name="noscript"></a>
+`noscript` element is a section in the html page which will be inserted if the script type of the page is unsupported or if currently turned off in the browser.
+Basic Syntax:
+```html
+<noscript>
+    .....
+</noscript>
+```
+Example:
+```Html
+<noscript>
+    <h1>This section is been shown because the script is not working for this browser</h1>
+</noscript>
+<p>It will be always shown to the user. I am Script Indepemdent</p>
+```
+<noscript>
+    <h1>This section is been shown because the script is not working for this browser</h1>
+</noscript>
+<p>It will be always shown to the user. I am Script Indepemdent</p>
+
+
+
 ## 3. Header Area <a name="headerArea"></a>
 ### 3.1 Meta <a name="meta"></a>
 `meta` actually is the **Data of the Data**. Different type of attribute of meta is being used. Some of them are:
@@ -967,6 +1010,21 @@ Meter represents either a scalar value within a known range or fractional value.
 - `form`: Distinguishable id for query in label of form or others.
 
 <meter id="fuel" value="40" min="0" max="100" low="20" high="80" optimum="70"></meter>
+
+
+### 4.4 Navigation <a name="nav"></a>
+
+Basic syntax:
+```html
+<nav class="navigation">
+    <ol>
+        <li><a href="#"> Option 1</a></li>
+        <li><a href="#"> Option 2</a></li>
+        <li><a href="#">Selected Tab</a></li>
+    </ol>
+</nav>
+```
+`nav` represent a section of a page, whose purpose is to provide navigation link. (Menus, Table of Contents, Indexes).\
 
 
 

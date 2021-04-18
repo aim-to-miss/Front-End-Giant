@@ -18,6 +18,7 @@
     <h5>Heading 5</h5>
     <h6>Heading 6</h6>
 
+    <hr>
     <!-- Paragraph -->
     <p>One line paragraph</p>
 
@@ -37,6 +38,8 @@
     <p>I am <b>Bold</b></p>
     <p>Pain starts with <i>Italic</i></p>
     <p>Sometimes you need to <u>Underline</u></p>
+
+    <hr>
     <!-- Adding Special Characters -->
     <p>
       Let's add a Copywite Character: &copy;<br />
@@ -48,7 +51,7 @@
     </p>
 
     <mark> Marked Text</mark>
-
+    <hr>
     <!-- Address -->
     <address>
       Written by Author <br />
@@ -57,7 +60,7 @@
       Box 564, Disneyland<br />
       USA
     </address>
-
+    <hr>
     <!-- Article -->
     <article>
     <h2>Joke 01</h2>
@@ -76,24 +79,26 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
     </blockquote>
-
+    <hr>
     <!-- Cite -->
     <cite>Most valuable text</cite> <br>
-
+    <hr>
     <!-- Code -->
     Time for some <code>code here. The font is browser default</code> <br>
 
     This text section is <del>Deleted</del> and this section is <ins>Inserted</ins> <br>
 
     <p><dfn>Unable:</dfn>A state where you are not able.</p> <br>
-
+    <hr>
     <!-- Dialog -->
     <dialog open>
         Text inside the dialog box
     </dialog>
+    <hr>
     <!-- Embed -->
     <embed type="video/mp4" src="./assets/video/video.mp4" width="300" height="300">
 
+    <hr>
     <!-- Figure -->
     <figure>
       <img
@@ -102,6 +107,7 @@
       <figcaption>MDN Logo</figcaption>
     </figure>
 
+    <hr>
     <!-- Image -->
     <img src="./assets/images/alone.jpg" alt="Image to Test"  usemap="workmap"/>
 
@@ -119,13 +125,14 @@
         href="#"
       />
     </map>
-
+    <hr>
     <!-- Hyperlink -->
     <a href="#">Go Check It</a>
     <a href="index.html"></a>
     <a href="#paragraph"></a>
     <a href="#"><img src="" /></a>
 
+    <hr>
     <!-- List -->
     <p>Lets Start with Unordered List <br /></p>
     <ui>
@@ -161,6 +168,7 @@
         <dd>Feature taht will not work.</dd>
     </dl>
 
+    <hr>
     <!-- Table -->
     <table>
         <caption>Learning Table</caption>
@@ -184,7 +192,7 @@
         <td>Item 13</td>
       </tr>
     </table>
-
+    <hr>
     <!-- From -->
     <form class="" action="index.html" method="post">
         <fieldset>
@@ -246,12 +254,14 @@
       <button type="button" name="button">From Submit</button>
     </form>
     <textarea name="name" rows="8" cols="80"></textarea>
+    <hr>
     <!-- Dropdown -->
     <select class="" name="">
       <option value="item01">Item01</option>
       <option value="item02">Item02</option>
       <option value="item03">Item03</option>
     </select>
+    <hr>
     <!-- Datalist -->
     <input list="dataList">
     <datalist id="dataList">
@@ -260,17 +270,19 @@
     </datalist>
 
     </datalist> -->
+    <hr>
     <!-- Audio -->
     <audio controls loop>
         <source src="./assets/audio/bensound-ukulele.mp3" type="audio/mp3">
     </audio>
-
+    <hr>
    <!-- video -->
 
     <video  controls loop poster="./assets/images/alone.jpg">
         <source src="./assets/video/video.mp4" type="video/mp4">
     </video>
 
+    <hr>
     <!-- iframe -->
     <iframe allowfullscreen allowpaymentrequest id="inlineFrameExample"
         title="Inline Frame Example"
@@ -279,10 +291,40 @@
         src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
     </iframe>
 
+    <hr>
     <!-- Meter -->
     <label for="fuel"> Your Fuel Level</label>
     <meter id="fuel" value="40" min="0" max="100" low="20" high="80" optimum="70"></meter>
 
+    <hr>
+    <!-- Nav -->
+    <nav class="navigation">
+        <ol>
+            <li><a href="#"> Option 1</a></li>
+            <li><a href="#"> Option 2</a></li>
+            <li><a href="#">Selected Tab</a></li>
+        </ol>
+    </nav>
+    <h1>Content of the Selected Tab</h1>
+    <p> Lo la li li</p>
+
+    <hr>
+    <!-- NoScript -->
+    <noscript>
+        <h1>This section is been shown because the script is not working for this browser</h1>
+    </noscript>
+    <p>It will be always shown to the user. I am Script Indepemdent</p>
+
+    <hr>
+    <!-- Object -->
+    <object type="image/jpg"
+            data="/assets/images/alone.jpg"
+            width="1000px"
+            height="500px"
+            form="formID"
+            name="UniqueID"
+            usemap="#mapName">
+    </object>
 
     <footer></footer>
   </body>
