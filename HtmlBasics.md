@@ -36,6 +36,36 @@
 
 `Head` : Meta, Links, Title. Will not be visible after rendered.
 
+`link`: Link element specifies the relationship betewwn the current documewnt and the external resource.
+
+```html
+<link rel="...." href="...." sizes = "...X..." type="" media="" as="" crossorigin="">
+```
+1. `as`: Specific class of content.(Used when `preload` or `pre-fetched` is used.) \
+2. `crossorigin`: Weather the resource should be fetched with a CORS request.(`anonymous`: A cross-origin performed without cred,`use-credentials`;)\
+3. `type`: Refers to the MIME type.
+4. `href`: Refers to the path of the resource.\
+5. `rel` : is for relationship.\
+6. `disabled`: for `rel=stylesheet`, if disabled is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load.
+
+There are different type of links:\
+- `alternate`: Alternate stylesheet.\
+- `author`:  Hyperlink to a page describing the author.\
+- `canonical`: Points to duplicate page, for crawler.\
+- `dns-prefetch`:Hints to the browser that that a resource is needed, allowing the browser to do a DNS lookup and protocol handshaking before a user clicks the link.\
+- `help`: HyperLink giving further help about the whole page.\
+- `icon`: Defines the resource for representation in user interface.\
+- `import`: Html imports.\
+- `license`: Hyperlink for lisence related resource. alternative `copyright`- but should be avoided.\
+- `manifest`: Indicates that the linked file is Web App Manifest.\
+- `modulepreload`: Initiates earlt loading of modules. \
+- `preconnect`: Open  a connection to the linked website in advance without disclosing any private information.\
+- `prefetch`: Suggest the browser to fetch the resource in advance.\
+- `preload`: Tells the browser to download a resource in advance.\
+- `search`: Hyper link refereed is specially designed for searching this document. \
+- `stylesheet`: Defines external resource to be used as stylesheet.\
+- `tag`: Indicates that the hyperlink refers to a document describing a tag that applies to this document.
+
 ## 2. Elements <a name="elements"></a>
 
 ### 2.1 Headlines <a name="headings"></a>
@@ -333,8 +363,6 @@ Example:
 <div><p>Text</p></div>
 ```
 
-
-
 #### 2.2.21 Embed <a name="embed"></a>
 Basic syntax:
 ```html
@@ -374,11 +402,50 @@ Example:
   <figcaption>MDN Logo</figcaption>
 </figure>
 
+#### 2.2.23 Header Element <a name="header"></a>
+`header` element represent the introductory of content.\
+`main` element represent the dominant content of the `body` element.The `main` element should be unique in the document.
+Basic syntax:
+```html
+<header>
+    <h1>...</h1>
+    .
+    .
+    .
+    <img src="" alt="">
+</header>
+<main>
+
+</main>
+
+```
+Example:
+```html
+<header>
+    <h1>Simple header of the documnet</h1>
+    <img src="" alt="">
+</header>
+<main>
+
+</main>
+
+
+```
+#### 2.2.24 Mark <a name="mark"></a>
+Basic syntax:
+```html
+<mark> .... </mark>
+```
+Represent marked or highlighted text.
+Example:
+```html
+<mark> Marked Text</mark>
+```
+<mark> Marked Text</mark>
 
 
 
-
-#### 2.2.24 Footer <a name="footer"></a>
+#### 2.2.25 Footer <a name="footer"></a>
 Basic syntax:
 ```html
 <footer></footer>
@@ -437,7 +504,7 @@ Example:
 </map>
 ```
 
-### 2.4 Link <a name="Image"></a>
+### 2.4 Hyper Link <a name="Image"></a>
 ```html
 <a href="#">Go Check It</a>
 ```
