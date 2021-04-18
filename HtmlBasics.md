@@ -379,7 +379,9 @@ Example:
 ```html
 <footer>Content of the footer section</footer>
 ```
-#### 2.2.24 Iframe <a name="iframe"></a>
+
+
+
 
 ### 2.3 Image <a name="Image"></a>
 ```html
@@ -720,6 +722,58 @@ Example:
 </datalist>
 
 The main difference between `select` and `datalist` is that the `select` requires users to choose from the indicated options. The `datalist` allows users to either choose from the specified answers, or to type in their original ones.
+
+### 2.8 Iframe <a name="iframe"></a>
+The HTML **Inline Frame element** (`<iframe>`) represents a nested browsing context. Usually  embedding another HTML page into the current one. Each embedded browsing context has its own `session history` and `document`. The browsing context that embeds the others is called the `parent browsing context`. Using iframe consumes more memory.
+Basic Syntax:
+```html
+<iframe id="..."
+    title="..."
+    width="..."
+    height="..."
+    src="...externalContextlink">
+</iframe>
+```
+There are several Attributes for iframe:
+- `allow`:Specifies a feature policy for the iframe.
+> `Feature Policy` Ferature policy allowes web developer to selewctively enable, disable and modify the behaviour of certain feature and APIs in the browser. It is Similer to Content Securtity policy but controls feature instade of security behaviour. For More information regarding to Feature Policy and Content security  Policy Look at the Appendix.
+
+- `allowfullscreen`: `true` can activate fullscreen mode. Alternative: `allow:"fullscreen"`.
+- `allowpaymentrequest`: `true` if a cross origin `<iframe>` should be allowed to invoke payment request API. Alternative: `allow="payment"`.
+- `csp`: Content security policy.
+- `height`: Height of the frame in px.
+- `loading`: Indicate how the browser shopuld load the iframe;
+> `eager` : Load the iframe imidiately; `lazy`: Defer loading of the iframe.
+
+- `name`: A targetable attribute.
+- `refererpolicy`: Indicate which referrer to be sent when fatching the iframe resource.
+> `no-referer`: Referer header will not be sent;\
+`no-referer-when-downgrade`;
+`origin`: Origin of the referring page (scheme, host,port);
+`origin-when-cross-origin`: Origin sent to the other origin.
+`strict-origin`: Sent when `HTTPS` -> `HTTPS`
+`strict-origin-when-cross-origin`
+`unsafe-url`: Origin + path will be sent.
+
+- `sandbox`: Applies extra restrictions to the content in the iframe. The value of the attribute can either be empty to apply all restrictions, or space-seperated tokens to lift particular restrictions.
+> `allow-downlolads-without-user-activations`: Allow a donload to occure without a gesture from the user.\
+'allow-downloads': Allow download tro occure with a gesture from the user.\
+`allow-forms`: Allow the resource to submit froms.\
+`allow-modals`;\
+`allow-orientation-lock`;\
+`allow-pointer-lock`;\
+`allow-popups`: `windows.open()` , `target = "_blank"`;\
+`allow-popups-to-escape-sandbox`;\
+`allow-presentation`;\
+`allow-same-origin`;\
+`allow-scripts`: Let's resource run scripts.
+
+- `src`: The url of the page to embed. `about:blank` to embed an empty page
+- `srcdoc`: Override `src` if the browser supports.
+- `width`: Width of the frames in px.
+
+Scripting:
+All `iframes` are included in `window.frames` pseudo-array. Windo object of `ifame` is `contentWindow`. THe `contentDocument` property refers to `document` inside the `iframe`
 
 ## 3. Header Area <a name="headerArea"></a>
 ### 3.1 Meta <a name="meta"></a>
@@ -1137,3 +1191,49 @@ All Tags in one place:
 |`<var>`|Defines a variable |
 |`<video>`|Defines embedded video content|
 |`<wbr>`|Defines a possible line-break|
+
+#### Appendix - 4:
+Feature Policy:
+Feature policy allows a web developer to enable, disable and modify behavior of certain features and APIs.
+
+> The `Feature Policy` header is now renamed to 'Permission Policy'
+
+It is a mechanism to explicitly declare what functionality is used or not used throughout your website. You can opt-in set of policies for the browsers on specific feature used throughout the website. It's like: you have different   feature in you hand but you want to use a specific one for always. Toy can tell it to your browser by `Feature Policy`.
+like:
+1. Change default autoplay behavior of Video.
+2. Restrict a site from using sensitive APIs like camera or microphone.
+3. Modify iframe behavior.
+4. Ensure images are sized properly and so on.
+
+It can control which `origin` will use which `feature`. Essentially you write a policy, which is an allowed list of origins for each freature. If every features are controlled by Feature pilicy than the feature is only enabled to the current document or frame if its origin matches in the allowed origin list (`allowlist`). If no pilicy list is created, the browser use a deafult allowlist.\
+
+Policy  = &sum; Policy Directives\
+Policy Directive = &sum;(featureName + &sum;allowlist)
+
+Feature policy is used in:
+1. `Feature Policy` in header.
+2. `allow` in iframes.
+
+Scripts can access feature policy object by: `Document.featurePolicy` or `HTMLIFrameElement.featurePolicy`.\
+
+`Allowlist` - `allowlist` is a list of origins that takes one or more of the following values, seperated by space.\
+1. `*` : Feature will be allowed in this document and nested context  of any origin.
+2. `self` : Feature will be allowed in this document and nested context in the same origin.
+3. `src` (`iframe`): Feature will be allowed in this iframe, as long as the document loaded in to it comes from the same origin of `src`.
+4. `none`: Feature isdiscable at the top level.
+
+Feature pilicy in `HTTPHeader`:
+
+`Feature-Policy: <feature name> <allowlist of origins>`
+Several Policy can be send, seperated with `;` or seperate `Feature Policy`
+
+Feature Policy in `iframe`:\
+
+```Html
+<iframe src="..." allo="camera 'none'; microphone 'none'">
+```
+
+All iframe inherit the policy of their parent page. if iframe has an `allow` attributes, the policies of the parent page and the `allowed` attribute are combained.
+
+#### Appendix - 5:
+Content Security Policy:
