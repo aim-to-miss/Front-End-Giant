@@ -38,6 +38,8 @@
     <p>I am <b>Bold</b></p>
     <p>Pain starts with <i>Italic</i></p>
     <p>Sometimes you need to <u>Underline</u></p>
+    <pre>I am Pre-formated        And space in between will be kept</pre>
+    <p>This is the quatation that I am making for the nation: <q cite="">Never try to be a hero on social media. You Are Product. Not Consumer</q></p>
 
     <hr>
     <!-- Adding Special Characters -->
@@ -49,15 +51,19 @@
       Hover the mouse to see the full form of:
       <abbr title="Bachelor of Science">BSc</abbr>
     </p>
-
-
     <mark> Marked Text</mark>
     <hr>
+    <!-- Output -->
     <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
         <input type="number" id="a" value="20"> +
         <input type="number" id="b" value="40"> : Result =
         <output name="result" for="a b">60</output>
     </form>
+
+    <!-- Sample output -->
+    <p>To revoke the last local commit, type: </p>
+    <samp>git reset --hard HEAD~1</samp>
+    <hr>
     <!-- Address -->
     <address>
       Written by Author <br />
@@ -322,7 +328,11 @@
     <!-- Meter -->
     <label for="fuel"> Your Fuel Level</label>
     <meter id="fuel" value="40" min="0" max="100" low="20" high="80" optimum="70"></meter>
-
+    <hr>
+    <label for="prgressbar1">Progress bar with value: </label>
+    <progress for="progressbar1" value="30" max="100">0%</progress>
+    <label for="progressbar2">Progress bar without value attribute: </label>
+    <progress max="100">0%</progress>
     <hr>
     <!-- Nav -->
     <nav class="navigation">

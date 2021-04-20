@@ -460,7 +460,30 @@ Example:
     <output name="result" for="a b">60</output>
 </form>
 ```
-#### 2.2.26 Footer <a name="footer"></a>
+#### 2.2.26 Preserve <a name="pre"></a>
+Basic syntax:
+```html
+<pre> ... </pre>
+```
+Represent formatted text which will be represented exactly as written in the html file.
+Example:
+```html
+<pre>I am Pre-formated        And space in between will be kept</pre>
+```
+
+#### 2.2.27 Quote <a name="q"></a>
+Basic syntax:
+```html
+<q cite="...."> .... </q>
+```
+Indicates that the text is a short inline quotation.
+- `cite`: A Url that designates a source for the reference for the quote.
+Example:
+```html
+    <p>This is the quatation that I am making for the nation: <q cite="">Never try to be a hero on social media. You Are Product. Not Consumer</q></p>
+```
+
+#### 2.2.28 Footer <a name="footer"></a>
 Basic syntax:
 ```html
 <footer></footer>
@@ -470,10 +493,6 @@ Example:
 ```html
 <footer>Content of the footer section</footer>
 ```
-
-
-
-
 
 ### 2.3 Image <a name="Image"></a>
 ```html
@@ -1071,8 +1090,27 @@ Meter represents either a scalar value within a known range or fractional value.
 
 <meter id="fuel" value="40" min="0" max="100" low="20" high="80" optimum="70"></meter>
 
+### 4.4 Progress <a name="progress"></a>
 
-### 4.4 Navigation <a name="nav"></a>
+Basic syntax:
+```html
+<progress for="...." value=".." max="..."> ... </progress>
+```
+Displays an indicator showing the completion of progress of a task.
+- `for`: Unique indicator for the `progress`.
+- `value`: Current numeric value. Must be in between `0` and `max`. Other wise it will be `0`.
+- `max`: Upper numeric bound. Default value `1`.\
+There is no minimum bound in `progress`. The minimum value is always `0`. If the `value` attribute is undefined it indicates that an activity is going on of no indication of how long it is expected to take.
+
+Example:
+```HTML
+<label for="prgressbar1">Progress bar with value: </label>
+<progress for="progressbar1" value="30" max="100">0%</progress>
+<label for="progressbar2">Progress bar without value attribute: </label>
+<progress max="100">0%</progress>
+```
+
+### 4.5 Navigation <a name="nav"></a>
 Basic syntax:
 ```html
 <nav class="navigation">
@@ -1085,7 +1123,7 @@ Basic syntax:
 ```
 `nav` represent a section of a page, whose purpose is to provide navigation link. (Menus, Table of Contents, Indexes).\
 
-### 4.4 Picture <a name="picture"></a>
+### 4.6 Picture <a name="picture"></a>
 `picture` element contains zero or more `source` element and one `img` element to offer alternative version of an image for different display/device. Browser will consider each `source` element and will consider the best among them. If no source matches or the browser does not support the picture element, the url of `img` element `src` will be selected. Properties of image like `object-fit` should be used in `img` element, not in `picture` element.
 Basic syntax:
 ```html
