@@ -443,9 +443,24 @@ Example:
 ```
 <mark> Marked Text</mark>
 
-
-
-#### 2.2.25 Footer <a name="footer"></a>
+#### 2.2.25 Output <a name="output"></a>
+Basic syntax:
+```html
+<output name="result" for=" ... "> ... </output>
+```
+`output` is a container element into which a site or app can inject the result of a calculation or the outcome of a user action.
+- `name`: Elements name.\
+- `for`: Space separated list of other element `id`s indicating that those elements contribute in the value.\
+- `form`: Id of the associate owner form element. If the value is not set then is consider itself as the child of ancestor form element.
+Example:
+```html
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="number" id="a" value="20"> +
+    <input type="number" id="b" value="40"> : Result =
+    <output name="result" for="a b">60</output>
+</form>
+```
+#### 2.2.26 Footer <a name="footer"></a>
 Basic syntax:
 ```html
 <footer></footer>
@@ -455,6 +470,7 @@ Example:
 ```html
 <footer>Content of the footer section</footer>
 ```
+
 
 
 
@@ -788,7 +804,41 @@ Example:
     <option value="item02">Item02</option>
     <option value="item03">Item03</option>
 </select>
-
+##### 2.7.3.1 OptGroup (select) <a name="optgroup"></a>
+`optgroup` creates a grouping of options within a `select` element.
+Simple Syntax:
+```html
+<select>
+    <optgroup label="....">
+        <option> ... </option>
+        .
+        .
+        .
+        <option> ... </option>
+    </optgroup>
+    .
+    .
+    .
+    <optgroup label="....">
+    </optgroup>
+</select>
+```
+Example:
+```html
+<label for="groupSelector">Choose something you need</label>
+<select id="groupSelector">
+    <optgroup label="SolidOptions">
+        <option value="cerial">Cerials</option>
+        <option value="rice">Rice</option>
+        <option value="bakery">Bakery</option>
+    </optgroup>
+    <optgroup label="LiquidOptions">
+        <option value="water">Water</option>
+        <option value="tea">Tea</option>
+        <option value="coffie">Coffie</option>
+    </optgroup>
+</select>
+```
 #### 2.7.4 Datalist (select) <a name="datalist"></a>
 `datalist` is used show a dropdown related to an input element. The `input` element have an attribute `list` which takes the id of the datalist.
 Basic Syntax:
@@ -887,6 +937,16 @@ Basic Syntax:
 - `form`: The form element (Owner): if any.
 - `name`: Name fro the control.
 - `usemap`: A hash named reference to `map` element.
+
+#### 2.9.1 Parameter of Object <a name="param"></a>
+`param` element is used to define the value of an object.
+
+```Html
+<object type="application/pdf" data="......pdf">
+    <param name="attribute1" value="value1">
+    <param name="attribute2" value="value2">
+</object>
+```
 
 ### 2.10 NoScript <a name="noscript"></a>
 `noscript` element is a section in the html page which will be inserted if the script type of the page is unsupported or if currently turned off in the browser.
@@ -1013,7 +1073,6 @@ Meter represents either a scalar value within a known range or fractional value.
 
 
 ### 4.4 Navigation <a name="nav"></a>
-
 Basic syntax:
 ```html
 <nav class="navigation">
@@ -1026,6 +1085,33 @@ Basic syntax:
 ```
 `nav` represent a section of a page, whose purpose is to provide navigation link. (Menus, Table of Contents, Indexes).\
 
+### 4.4 Picture <a name="picture"></a>
+`picture` element contains zero or more `source` element and one `img` element to offer alternative version of an image for different display/device. Browser will consider each `source` element and will consider the best among them. If no source matches or the browser does not support the picture element, the url of `img` element `src` will be selected. Properties of image like `object-fit` should be used in `img` element, not in `picture` element.
+Basic syntax:
+```html
+<picture>
+    <source srcset=" ... w, ..., ....x, ..." media="(...)">
+        .
+        .
+        .
+    <source>
+    <img src="..." alt="...">
+</picture>
+```
+- `media`: Specifies a media condition.
+- `srcset`: Define multiple size of the same image, allowing the browser to select the appropriate image source. It is composed of a comma-separated list of image descriptions.
+    - `URL` + `width`**w**
+    - `URL` + `density`**x**
+- `type`: MIME type.
+
+Example:
+```html
+<picture>
+    <source srcset="/assets/images/alone.jpg" media="(min-width:600px)">
+    <source srcset="/assets/images/alone.jpg 200w, /assets/images/alone.jpg .5x" type="image/jpg">
+    <img src="/assets/images/alone.jpg" alt="testimage">
+</picture>
+```
 
 
 ### Appendix -1

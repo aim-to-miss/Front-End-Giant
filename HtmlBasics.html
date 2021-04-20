@@ -50,8 +50,14 @@
       <abbr title="Bachelor of Science">BSc</abbr>
     </p>
 
+
     <mark> Marked Text</mark>
     <hr>
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="number" id="a" value="20"> +
+        <input type="number" id="b" value="40"> : Result =
+        <output name="result" for="a b">60</output>
+    </form>
     <!-- Address -->
     <address>
       Written by Author <br />
@@ -262,6 +268,20 @@
       <option value="item03">Item03</option>
     </select>
     <hr>
+    <!-- optgroup -->
+    <label for="groupSelector">Choose something you need</label>
+    <select id="groupSelector">
+        <optgroup label="SolidOptions">
+            <option value="cerial">Cerials</option>
+            <option value="rice">Rice</option>
+            <option value="bakery">Bakery</option>
+        </optgroup>
+        <optgroup label="LiquidOptions">
+            <option value="water">Water</option>
+            <option value="tea">Tea</option>
+            <option value="coffie">Coffie</option>
+        </optgroup>
+    </select>
     <!-- Datalist -->
     <input list="dataList">
     <datalist id="dataList">
@@ -271,6 +291,13 @@
 
     </datalist> -->
     <hr>
+
+    <!-- Picture -->
+    <picture>
+        <source srcset="/assets/images/alone.jpg" media="(min-width:600px)">
+        <source srcset="/assets/images/alone.jpg 200w, /assets/images/alone.jpg .5x" type="image/jpg">
+        <img src="/assets/images/alone.jpg" alt="testimage">
+    </picture>
     <!-- Audio -->
     <audio controls loop>
         <source src="./assets/audio/bensound-ukulele.mp3" type="audio/mp3">
@@ -325,6 +352,12 @@
             name="UniqueID"
             usemap="#mapName">
     </object>
+
+    <object type="application/pdf" data="......pdf">
+        <param name="attribute1" value="value1">
+        <param name="attribute2" value="value2">
+    </object>
+
 
     <footer></footer>
   </body>
