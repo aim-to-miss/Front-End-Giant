@@ -391,7 +391,7 @@ Example:
 <figure>
   <img
       src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="The beautiful MDN logo.">
+  alt="The beautiful MDN logo." onContextMenu="return false;">
   <figcaption>MDN Logo</figcaption>
 </figure>
 ```
@@ -482,8 +482,61 @@ Example:
 ```html
     <p>This is the quatation that I am making for the nation: <q cite="">Never try to be a hero on social media. You Are Product. Not Consumer</q></p>
 ```
+#### 2.2.28 Sample output <a name="samp"></a>
+Basic syntax:
+```html
+<samp> ... </samp>
+```
+Enclouse inline text which represent sample output from a computer program.
+Example:
+```html
+<p>To revoke the last local commit, type: </p>
+<samp>git reset --hard HEAD~1</samp>
+```
+#### 2.2.29 Section <a name="section"></a>
+`section` element represent a `generic` standalone section of a Document. Sections should always have a heading, with very few exceptions. A rule of thumb is that a <section> should logically appear in the outline of a document.
 
-#### 2.2.28 Footer <a name="footer"></a>
+```html
+<section>
+  <h2>Heading</h2>
+  <p>Bunch of awesome content</p>
+</section>
+```
+Sections with no headings do not appear in the document outline. If you did want force the inclusion of such an HTML block inside the document outline but not affect the visual output in any way, you could include a heading but hide it.\
+```html
+<section>
+  <h2 class="hidden">Controls</h2>
+  <button class="reply">Reply</button>
+  <button class="reply-all">Reply to all</button>
+  <button class="fwd">Forward</button>
+  <button class="del">Delete</button>
+</section>
+```
+#### 2.2.30 Span <a name="span"></a>
+`span` is a generic inline container for phrasing content which does not inherently represent anything.(It have no meaning by itself but just a container). It group elements for:
+- Styling Purpose (`id`,`class`).
+- Share attributes values (`lang`).
+The main difference between the `div` and `span` is, `div` is block level element but `span` is inline element.
+
+```html
+    <p> ...<span class="...">...</span>, <span class="..."> ... </span> ... </p>
+```
+
+#### 2.2.31 Small <a name="small"></a>
+Basic syntax:
+```html
+<small> ... </small>
+```
+Render the text within it one font-size smaller.
+
+#### 2.2.32 Small <a name="small"></a>
+Basic syntax:
+```html
+<var> ... </var>
+```
+Represents the name of a variable. It's typically presented using an italicized version of the current typeface.
+
+#### 2.2.33 Footer <a name="footer"></a>
 Basic syntax:
 ```html
 <footer></footer>
@@ -652,12 +705,25 @@ Basic Syntax:
 ```html
 <table>
     <caption></caption>
-    <tr>
-        <th>...</th>
-    </tr>
-    <tr>
-        <td>...</td>
-    </tr>
+    <colgroup> ... </colgroup>
+    <thead>
+        <tr>
+            <th>...</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>...</td>
+        </tr>
+
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>...</th>
+            <td>...</td>
+        </tr>
+    </tfoot>
     ...
 </table>
 ```
@@ -669,6 +735,7 @@ Basic Syntax:
 `charoff`: Specifies the number of characters to cutoff for exceeding.\
 `class`: If any custom class needed.\
 `style`: If any styling needed.\
+`thead`,`tbody`,`tfoot` represent the table header, table body and table body section.\
 Example:
 ```html
 <table>
@@ -677,21 +744,32 @@ Example:
         <col span="1" class="" style="background-color:red;">
         <col span="2" class="" style="background-color:yellow;">
     </colgroup>
-    <tr>
-        <th>Column 01</th>
-        <th>Column 02</th>
-        <th>Column 03</th>
-    </tr>
-    <tr>
-        <td>Item 01</td>
-        <td>Item 02</td>
-        <td>Item 03</td>
-    </tr>
-    <tr>
-        <td>Item 11</td>
-        <td>Item 12</td>
-        <td>Item 13</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>Column 01</th>
+            <th>Column 02</th>
+            <th>Column 03</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Item 01</td>
+            <td>Item 02</td>
+            <td>Item 03</td>
+        </tr>
+        <tr>
+            <td>Item 11</td>
+            <td>Item 12</td>
+            <td>Item 13</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Item 11</td>
+            <th>Item 12</td>
+            <th>Item 13</td>
+        </tr>
+    </tfoot>
 </table>
 ```
 <table>
@@ -1068,6 +1146,44 @@ Example:
     <source src="./assets/video/video.mp4" type="video/mp4">
 </video>
 ```
+#### 4.2.1 Track <a name="track"></a>
+`track` element is used as a child of the media elements `audio` and `video`element. It specify **timed text tracks** (or time-based data) for example to automatically handle subtitles.
+```html
+<video controls
+       src="...">
+    <track default
+           kind="..."
+           srclang=".."
+           src="..." />
+</video>
+```
+- `default`: Indicates that the track should be enabled, unless user's preference indicate that another track is suitable.
+- `kind`: How the text track is meant to be used.
+    - `subtitles`
+    - `captions`: Closed captions provide a transcription and possibly a translation of audio.It may include important non-verbal information such as music cues or sound effects.
+    - `descriptions`: Textual description of the video content.Suitable for users who are blind or where the video cannot be seen.
+    - `chapters`: Chapter titles are intended to be used when the user is navigating the media resource.
+    - `metadata`: Tracks used by scripts. Not visible to the user.
+    Default value is `subtitle`.
+- `label`:A user-readable title of the text track which is used by the browser when listing available text tracks.
+- `src`: Address of the track. (`.vtt`) file. URL value must have the same origin as the document.
+- `srclang`:Language of the track text data. Must be defined for `subtitle` track.
+A `media` element cannot have more than one track with the same `kind`, `srclang`, and `label`.
+
+```html
+<video controls poster="/images/sample.gif">
+   <source src="sample.mp4" type="video/mp4">
+   <track kind="captions" src="sampleCaptions.vtt" srclang="en">
+   <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en">
+   <track kind="chapters" src="sampleChapters.vtt" srclang="en">
+   <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de">
+   <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en">
+   <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1">
+   <track kind="metadata" src="keyStage2.vtt" srclang="en">
+       ...
+</video>
+
+```
 
 ### 4.3 Meter <a name="meter"></a>
 
@@ -1150,6 +1266,131 @@ Example:
     <img src="/assets/images/alone.jpg" alt="testimage">
 </picture>
 ```
+
+### 4.7 Script <a name="script"></a>
+`script` used to embed executable code/data/refer to code.
+- `async`: The script will be fetched in parallel to parsing and fetched as soon as possible. It allows the elimination of **parser-blocking JavaScript**.
+- `crossorigin`: Allow error logging for sites which use a separate domain for static media. (Though CORS check fails).
+- `defer`: Indicate that the script meant to be executed after the document have been parsed, before calling the Event  `DOMContentLoaded`. Scripts with the `defer` attribute will prevent the `DOMContentLoaded` event from firing until the script has loaded and finished evaluating. It do not have any effect on `module` script but `src` script.
+- `integrity`: This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation.
+```Html
+<script src="https://example.com/example-framework.js"
+        integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+        crossorigin="anonymous"></script>
+```
+- `nomodule`: Indicate that the script should not be executed in browsers that support ES2015 modules.
+- `nonce`: Whitelist scripts in a **script-src Content-Security-Policy**.
+
+```html
+Content-Security-Policy: script-src 'nonce-2726c7f26c'
+```
+
+```html
+<script nonce="2726c7f26c">
+  var inline = 1;
+</script>
+```
+- `refererpolicy`: Which referrer to send when fetching the script, or resource fetched by Script.
+    - `no-referrer`
+    - `no-referrer-when-downgrade`: (Default) The Referrer header will not be sent to origins without `https`.
+    - `origin`: Origin of the refereeing page. (`scheme`+`host`+`port`).
+    - `origin-when-cross-origin`: Referrer sent to other origins will be limited.  (`scheme`+`host`+`port`).
+    - `same-origin`: Referrer will be sent to same origin.
+    - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (e.g. `HTTPS` → `HTTPS`).
+    - `strict-origin-when-cross-origin`: Send a full URL when performing a same-origin request, but only send the origin when the protocol security level stays the same (e.g.`HTTPS` → `HTTPS`), and send no header to a less secure destination (e.g. `HTTPS` → `HTTP`).
+- `src`:URI of an external script.
+- `type`:
+    - `Omitted or a JavaScript MIME type(text/javascript)`: Should be kept omitted/blank to represent JavaScript.
+    - `module`: Represent JavaScript module.
+    - `Any other value`: Won't be processed by the browser.
+
+`parser-blocking JavaScript` is where the browser would have to load and evaluate scripts before continuing to parse.
+
+```html
+<script src="javascript.js"></script>
+```
+```html
+<script>
+  alert("Hello World!");
+</script>
+```
+
+```html
+<script type="module" src="main.js"></script>
+<script nomodule src="fallback.js"></script>
+```
+```html
+<!-- Generated by the server -->
+<script id="data" type="application/json">{"userId":1234,"userName":"John Doe","memberSince":"2000-01-01T00:00:00.000Z"}</script>
+
+<!-- Static -->
+<script>
+  const userInfo = JSON.parse(document.getElementById("data").text);
+  console.log("User information: %o", userInfo);
+</script>
+```
+### 4.8 Style <a name="style"></a>
+`style` contains style information for a document, or part of a document.It contains CSS, which is applied to the contents of the document containing the `style` element. It mus be included in the `head` section of the document. For multiple style document, make sure you include them in correct order.
+```html
+<head>
+  <style>
+    p {
+      color: red;
+    }
+  </style>
+</head>
+```
+- `media`: Apply style for certain media type.
+```html
+<style media="print">
+    p {
+      color: blue;
+      background-color: yellow;
+    }
+  </style>
+```
+- `nonce`: A cryptographic nonce (number used once) used to whitelist inline styles in a style-src Content-Security-Policy.
+- `title`: Specifies alternative style sheet sets.
+
+### 4.9 Details and Summery <a name="details"></a>
+`details` Creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state.A summary or label must be provided using the `summary` element. It have boolen `open` attribute and support `toggle` event.
+Basic Syntax:
+```html
+<details>
+    <summary>...</summary>
+    <!-- Some Content -->
+</details>
+```
+- `open`: Indicates that whether or not the details should be expand.
+
+### 4.10 Time <a name="time"></a>
+`time` represent a specific period of time. it use `datetime` attribute for translation of time to machine-readable formate.
+- A `time` on `24hr` clock.
+- A precise date in the `Gregorian calendar` with time zone information.
+- A valid time duration.
+Basic Syntax:
+```html
+<time datetime="..."> Time Text </time>
+```
+Example:
+```html
+<time datetime="2018-07-07">July 7</time>
+<time datetime="20:00">20:00</time>
+<time datetime="PT2H30M">2h 30m</time>
+```
+`datetime` indicates tine and/or date of the element. It should always follow the valid formate. Valid formates are:
+- `2011` : valid **Year**.
+- `2011-11`: valid **Month**.
+- `2011-11-10`: valid **date**.
+- `11-10`: valid **Yeasless Date**.
+- `2021-W47`: valid **week**.
+- `14:56`: valid **Time**.
+- `14:56:58`: valid **Time**
+- `14:56:58.349`: valid **Time**
+- `2011-11-18T14:54:39.929`: valid **Local Time and Date**.
+- `2011-11-18 14:54:39.929`: valid **Local Time and Date**.
+- `2011-11-18T14:54:39.929Z`, `2011-11-18T14:54:39.929-0400`, `2011-11-18T14:54:39.929-04:00`, `2011-11-18 14:54:39.929Z`,`2011-11-18 14:54:39.929-0400`, `2011-11-18 14:54:39.929-04:00`.
+- `PT4H18M3S`: Valid **Duration**
 
 
 ### Appendix -1
