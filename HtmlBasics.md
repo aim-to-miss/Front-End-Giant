@@ -1766,7 +1766,7 @@ Several Policy can be send, seperated with `;` or seperate `Feature Policy`
 Feature Policy in `iframe`:\
 
 ```Html
-<iframe src="..." allo="camera 'none'; microphone 'none'">
+<iframe src="..." allow="camera 'none'; microphone 'none'">
 ```
 
 All iframe inherit the policy of their parent page. if iframe has an `allow` attributes, the policies of the parent page and the `allowed` attribute are combained.
