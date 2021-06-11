@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      HtmlLearners
+    </title>
+    <meta />
+    <link />
+  </head>
+  <body>
+    <!-- All Headings -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <hr>
+    <!-- Paragraph -->
+    <p>One line paragraph</p>
+
+    <p id="paragraph">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in<br />
+      reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+      qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p>(A word)<sup>Over another word</sup></p>
+    <p>(A word)<sub>Below another word</sub></p>
+    <p>This is a <strong> Strong </strong> word</p>
+    <p>This word is <em>Emphisized</em></p>
+    <p>I am <b>Bold</b></p>
+    <p>Pain starts with <i>Italic</i></p>
+    <p>Sometimes you need to <u>Underline</u></p>
+    <pre>I am Pre-formated        And space in between will be kept</pre>
+    <p>This is the quatation that I am making for the nation: <q cite="">Never try to be a hero on social media. You Are Product. Not Consumer</q></p>
+
+    <hr>
+    <!-- Adding Special Characters -->
+    <p>
+      Let's add a Copywite Character: &copy;<br />
+      We can also use code for the specialCharacters: &#169;
+    </p>
+    <p>
+      Hover the mouse to see the full form of:
+      <abbr title="Bachelor of Science">BSc</abbr>
+    </p>
+    <mark> Marked Text</mark>
+    <hr>
+    <!-- Output -->
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="number" id="a" value="20"> +
+        <input type="number" id="b" value="40"> : Result =
+        <output name="result" for="a b">60</output>
+    </form>
+
+    <hr>
+    <!-- Sample output -->
+    <p>To revoke the last local commit, type: </p>
+    <samp>git reset --hard HEAD~1</samp>
+    <hr>
+    <!--Section-->
+    <section>
+      <h2>Heading</h2>
+      <p>Bunch of awesome content</p>
+    </section>
+    <hr>
+    <!-- Span -->
+    <p>Add the <span class="ingredient">basil</span>, <span class="ingredient">pine nuts</span> and <span class="ingredient">garlic</span> to a blender and blend into a paste.</p>
+    <!-- Address -->
+    <address>
+      Written by Author <br />
+      Visit us at:<br />
+      Example.com<br />
+      Box 564, Disneyland<br />
+      USA
+    </address>
+    <hr>
+    <!-- Article -->
+    <article>
+    <h2>Joke 01</h2>
+    <p>Programming is fun.</p>
+    </article>
+
+    <bdo dir="rtl">
+        Go Right
+    </bdo>
+    <bdo dir="ltr">
+        Go Left
+    </bdo>
+
+    <blockquote cite="http://">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </blockquote>
+    <hr>
+    <!-- Cite -->
+    <cite>Most valuable text</cite> <br>
+    <hr>
+    <!-- Code -->
+    Time for some <code>code here. The font is browser default</code> <br>
+
+    This text section is <del>Deleted</del> and this section is <ins>Inserted</ins> <br>
+
+    <p><dfn>Unable:</dfn>A state where you are not able.</p> <br>
+    <hr>
+    <!-- Dialog -->
+    <dialog open>
+        Text inside the dialog box
+    </dialog>
+    <hr>
+    <!-- Embed -->
+    <embed type="video/mp4" src="./assets/video/video.mp4" width="300" height="300">
+
+    <hr>
+    <!-- Figure -->
+    <figure>
+      <img id="myImage"
+          src="https://developer.mozilla.org/static/img/favicon144.png"
+      alt="The beautiful MDN logo." onmousedown="return false" draggable="false" style="pointer-events: none; user-select: none;" onContextMenu="return false;">
+      <figcaption>MDN Logo</figcaption>
+    </figure>
+
+    <hr>
+    <!-- Image -->
+    <img src="./assets/images/alone.jpg" alt="Image to Test"  usemap="workmap"/>
+
+    <map name="workmap">
+      <area
+        shape="rect"
+        coords="34,44,270,350"
+        alt="Computer"
+        href="#"
+      />
+      <area
+        shape="rect"
+        coords="290,172,333,250"
+        alt="Phone"
+        href="#"
+      />
+    </map>
+    <hr>
+    <!-- Hyperlink -->
+    <a href="#">Go Check It</a>
+    <a href="index.html"></a>
+    <a href="#paragraph"></a>
+    <a href="#"><img src="" /></a>
+
+    <hr>
+    <!-- List -->
+    <p>Lets Start with Unordered List <br /></p>
+    <ui>
+      <li>Item 01</li>
+      <li>Item 02</li>
+      <li>Item 03</li>
+    </ui>
+    <p>Now Ordered List <br /></p>
+    <ol>
+      <li>Item 01</li>
+      <li>Item 02</li>
+      <li>Item 03</li>
+    </ol>
+
+    <p>Nasted list is also possible</p>
+
+    <ul>
+      <li>Item01</li>
+      <li>
+        Item02
+        <ol>
+          <li>SubItem01</li>
+          <li>SubItem02</li>
+        </ol>
+      </li>
+      <li>Item03</li>
+    </ul>
+
+    <dl>
+        <dt>Code</dt>
+        <dd>Feature that works.</dd>
+        <dt>Bug</dt>
+        <dd>Feature taht will not work.</dd>
+    </dl>
+
+    <hr>
+    <!-- Table -->
+    <table>
+        <caption>Learning Table</caption>
+        <colgroup>
+            <col span="1" class="" style="background-color:red;">
+            <col span="2" class="" style="background-color:yellow;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Column 01</th>
+                <th>Column 02</th>
+                <th>Column 03</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Item 01</td>
+                <td>Item 02</td>
+                <td>Item 03</td>
+            </tr>
+            <tr>
+                <td>Item 11</td>
+                <td>Item 12</td>
+                <td>Item 13</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Item 11</td>
+                <th>Item 12</td>
+                <th>Item 13</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <!-- From -->
+    <form class="" action="index.html" method="post">
+        <fieldset>
+            <legend>
+                All Possible Input Type
+            </legend>
+            <ul>
+              <li>
+                <label for="labeledField"
+                  >Label for input field, related with ID</label
+                ><br />
+                <input type="text" name="" value="" id="labeledField" />
+              </li>
+              <li>
+                <p>Label without label Element</p>
+                <input
+                  type="text"
+                  name="withoutLabel"
+                  placeholder="Wtrite what you expect"
+                />
+              </li>
+              <li><input type="text" value="preDefinedValue" /></li>
+              <li><input type="submit" value="Button Text - Go" /></li>
+              <li><input type="checkbox" /> Check if you understand</li>
+              <li><input type="color" /> Select your color</li>
+              <li>Pick Up your required date: <input type="date" /></li>
+              <li>
+                Pick Up your required date with time: <input type="datetime-local" />
+              </li>
+              <li>Enter email: <input type="email" /></li>
+              <li><input type="file" /> Select file to upload</li>
+              <li>
+                There is a field, But you can not see it. <input type="hidden" />
+              </li>
+              <li><input type="image" /> Upload your image</li>
+              <li>Just pick up the month of a year: <input type="month" /></li>
+              <li>Dial Your Numbr: <input type="number" /></li>
+              <li>
+                <input type="password" placeholder="Password" /> Password please!!!
+              </li>
+              <li>
+                <input type="radio" /> Item to check 01 <br />
+                <input type="radio" /> Item to check 02
+              </li>
+              <li><input type="range" /> How much angry are you?</li>
+              <li><input type="reset" /> Reset all the value.</li>
+              <li>
+                <input type="search" /> Search Anything. But you will get nothing.
+              </li>
+              <li>
+                May be you cal call your Parents:
+                <input type="tel" name="" value="" />
+              </li>
+              <li>Tell me when you get up: <input type="time" /></li>
+              <li><input type="url" /> : Make me Frieds</li>
+              <li>Take any week of a year for vacation: <input type="week" /></li>
+            </ul>
+        </fieldset>
+      <button type="button" name="button">From Submit</button>
+    </form>
+    <textarea name="name" rows="8" cols="80"></textarea>
+    <hr>
+    <!-- Dropdown -->
+    <select class="" name="">
+      <option value="item01">Item01</option>
+      <option value="item02">Item02</option>
+      <option value="item03">Item03</option>
+    </select>
+    <hr>
+    <!-- optgroup -->
+    <label for="groupSelector">Choose something you need</label>
+    <select id="groupSelector">
+        <optgroup label="SolidOptions">
+            <option value="cerial">Cerials</option>
+            <option value="rice">Rice</option>
+            <option value="bakery">Bakery</option>
+        </optgroup>
+        <optgroup label="LiquidOptions">
+            <option value="water">Water</option>
+            <option value="tea">Tea</option>
+            <option value="coffie">Coffie</option>
+        </optgroup>
+    </select>
+    <!-- Datalist -->
+    <input list="dataList">
+    <datalist id="dataList">
+        <option value="item01">Item 01</option>
+        <option value="item02">Item 02</option>
+    </datalist>
+
+    </datalist> -->
+    <hr>
+
+    <!-- Picture -->
+    <picture>
+        <source srcset="/assets/images/alone.jpg" media="(min-width:600px)">
+        <source srcset="/assets/images/alone.jpg 200w, /assets/images/alone.jpg .5x" type="image/jpg">
+        <img src="/assets/images/alone.jpg" alt="testimage">
+    </picture>
+    <!-- Audio -->
+    <audio controls loop>
+        <source src="./assets/audio/bensound-ukulele.mp3" type="audio/mp3">
+    </audio>
+    <hr>
+   <!-- video -->
+
+    <video  controls loop poster="./assets/images/alone.jpg">
+        <source src="./assets/video/video.mp4" type="video/mp4">
+            <track kind="subtitles" src="sampleSubtitles_en.srt" srclang="en">
+    </video>
+
+    <hr>
+    <!-- iframe -->
+    <iframe allowfullscreen allowpaymentrequest id="inlineFrameExample"
+        title="Inline Frame Example"
+        width="300"
+        height="200"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+    </iframe>
+
+    <hr>
+    <!-- Meter -->
+    <label for="fuel"> Your Fuel Level</label>
+    <meter id="fuel" value="40" min="0" max="100" low="20" high="80" optimum="70"></meter>
+    <hr>
+    <label for="prgressbar1">Progress bar with value: </label>
+    <progress for="progressbar1" value="30" max="100">0%</progress>
+    <label for="progressbar2">Progress bar without value attribute: </label>
+    <progress max="100">0%</progress>
+    <hr>
+    <!-- Nav -->
+    <nav class="navigation">
+        <ol>
+            <li><a href="#"> Option 1</a></li>
+            <li><a href="#"> Option 2</a></li>
+            <li><a href="#">Selected Tab</a></li>
+        </ol>
+    </nav>
+    <h1>Content of the Selected Tab</h1>
+    <p> Lo la li li</p>
+
+    <hr>
+    <!-- NoScript -->
+    <noscript>
+        <h1>This section is been shown because the script is not working for this browser</h1>
+    </noscript>
+    <p>It will be always shown to the user. I am Script Indepemdent</p>
+
+    <hr>
+    <!-- Object -->
+    <object type="image/jpg"
+            data="/assets/images/alone.jpg"
+            width="1000px"
+            height="500px"
+            form="formID"
+            name="UniqueID"
+            usemap="#mapName">
+    </object>
+
+    <object type="application/pdf" data="......pdf">
+        <param name="attribute1" value="value1">
+        <param name="attribute2" value="value2">
+    </object>
+
+    <hr>
+    <!-- Script -->
+    <!-- Generated by the server -->
+    <script id="data" type="application/json">{"userId":1234,"userName":"John Doe","memberSince":"2000-01-01T00:00:00.000Z"}</script>
+
+    <!-- Static -->
+    <script>
+      const userInfo = JSON.parse(document.getElementById("data").text);
+      console.log("User information: %o", userInfo);
+    </script>
+    <hr>
+
+    <!-- Details and Summary -->
+    <details>
+      <summary>System Requirements</summary>
+      <p>Requires a computer running an operating system. The computer
+      must have some memory and ideally some kind of long-term storage.
+      An input device as well as some form of output device is
+      recommended.</p>
+    </details>
+    <hr>
+    <!-- Time -->
+    <time datetime="2018-07-07">July 7</time>
+    <time datetime="20:00">20:00</time>
+    <time datetime="PT2H30M">2h 30m</time>
+    <hr>
+    <footer></footer>
+  </body>
+</html>
