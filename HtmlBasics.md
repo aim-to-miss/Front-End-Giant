@@ -2154,42 +2154,61 @@ attributes, the policies of the parent page and the `allowed` attribute are
 combained.
 
 #### Appendix - 5:
+
 # Content Security Policy:
 
 #### Appendix - 6:
+
 # Global Attribute
-Attributes that are common to all element are considered as `global attribute`. Some elemetns amy not be effected by them.\
+
+Attributes that are common to all element are considered as `global attribute`.
+Some elemetns amy not be effected by them.\
+
 1. `accesskey`: Specifies a shortcutkey to focus/activate an element.
+
 ```html
-<a href="#" accesskey="h">HTML</a><br>
+<a href="#" accesskey="h">HTML</a><br />
 <a href="3" accesskey="c">CSS</a>
 ```
+
 `alt` + `accesskey` will activate the hyperlink.\
 
-2. `class`: Space-seperated list of the case sensative words. They are usert to allow `CSS` and `JavaScript` to select and access the specific element by class selector function or DOM Method.
-3. `contenteditable`: Indicate if the element should be editable by the user. It takes `true` and `false` as value. By default an Element is editable if the `parent` element is editable.
-4. `data-*` : Custom Data Attribute, allow proprietary information to be exchanged between `html` and `DOM` representation by script.
+2. `class`: Space-seperated list of the case sensative words. They are usert to
+   allow `CSS` and `JavaScript` to select and access the specific element by
+   class selector function or DOM Method.
+3. `contenteditable`: Indicate if the element should be editable by the user. It
+   takes `true` and `false` as value. By default an Element is editable if the
+   `parent` element is editable.
+4. `data-*` : Custom Data Attribute, allow proprietary information to be
+   exchanged between `html` and `DOM` representation by script.
    ```html
-    <li data-id="1234">List value </li>
-   ``` 
-   `HTMLElement.dataset` property gives access to these data attribute value. `*` means any name. Point to remember that the `name` must not contain any capital letters.\
-   `data-test-value` will be accessable via `HTMLElement.dataset.testValue` or `HTMLElement.dataset["testValue"]`. Dash is replesed by Capitalizing the `nextLetter`.
+   <li data-id="1234">List value</li>
+   ```
+   `HTMLElement.dataset` property gives access to these data attribute value.
+   `*` means any name. Point to remember that the `name` must not contain any
+   capital letters.\
+   `data-test-value` will be accessable via `HTMLElement.dataset.testValue` or `HTMLElement.dataset["testValue"]`.
+   Dash is replesed by Capitalizing the `nextLetter`.
 5. `dir` : Represents the directionalityofthe element Text
    ```html
-   <p dir="rtl">
-   <p dir="ltr">
-   <p dir="auto">
+   <p dir="rtl"></p>
+   <p dir="ltr"></p>
+   <p dir="auto"></p>
    ```
-   This properties can be overwridden by css `direction` and `unicode-bidi` 
-6. `draggable` : Indicates wheather an element can be dragged. 
+   This properties can be overwridden by css `direction` and `unicode-bidi`
+6. `draggable` : Indicates wheather an element can be dragged.
    ```html
-    <img draggable="false">
+   <img draggable="false" />
    ```
-   The value can be either `true` or `false`. As default `text`, `image`, `link` are draggable.We can always modify event `ondragstart` for specifing draging oprtation of all elements. 
-7. `enterkeyhint` : Defines the operation of the enter key in virtual keyboard (Mibile Keyboard) for `textarea` or `input` element or element with `contenteditable` attribute.
+   The value can be either `true` or `false`. As default `text`, `image`, `link`
+   are draggable.We can always modify event `ondragstart` for specifing draging
+   oprtation of all elements.
+7. `enterkeyhint` : Defines the operation of the enter key in virtual keyboard
+   (Mibile Keyboard) for `textarea` or `input` element or element with
+   `contenteditable` attribute.
    ```html
-    <input enterkeyhint="go">
-    <p  contenteditable enterkeyhint="go">
+   <input enterkeyhint="go" />
+   <p contenteditable enterkeyhint="go"></p>
    ```
    Accepted values are:\
    `enter` --> Insert a newline.\
@@ -2198,15 +2217,19 @@ Attributes that are common to all element are considered as `global attribute`. 
    `next` --> Take user to the next field that accept text.\
    `previous` --> Take user to the previous field.\
    `search` --> takes the user to the reasult of searching the text.\
-   `send` --> Deliver the text to it's target. 
-8. `hidden` : Boolean attribute indicate that the element is not relevent, and will not show.
-9. `id` : Identifier which must be unique in the whole document. No white space is allowed. Element can have one single ID value.
+   `send` --> Deliver the text to it's target.
+8. `hidden` : Boolean attribute indicate that the element is not relevent, and
+   will not show.
+9. `id` : Identifier which must be unique in the whole document. No white space
+   is allowed. Element can have one single ID value.
 10. `lang` : Defines the `language` of an element.
 11. `nonce` : Identifier allows `script` element to perform security operations.
-12. `spellcheck` : Defies weather an element should be checked for spelling errors. Possible values are `true` and `false`.
+12. `spellcheck` : Defies weather an element should be checked for spelling
+    errors. Possible values are `true` and `false`.
 13. `style` : Add stlying declaration for an element.
-14. `tabindex` : Allow to navigate through  key board `tab`.\
+14. `tabindex` : Allow to navigate through key board `tab`.\
     `-1` --> Means not reachable through sequential tab.\
     `0` --> Means focusable in sequential navigation.\
     `1-32767` --> Navigation moves to assending order. but `0` comes last.
-15. `translate` : Tells if an element should be allowed to be translated or not.Possible values are `true` and `false`. 
+15. `translate` : Tells if an element should be allowed to be translated or
+    not.Possible values are `true` and `false`.
